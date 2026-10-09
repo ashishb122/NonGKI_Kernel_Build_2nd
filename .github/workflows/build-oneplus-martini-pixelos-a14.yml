@@ -16,7 +16,7 @@ env:
   KERNEL_BRANCH: "fourteen-qpr3"
 
   CLANG_SOURCE: "https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.7/LLVM-19.1.7-Linux-X64.tar.xz"
-  CLANG_BRANCH: ""
+  CLANG_BRANCH: "llvmorg-19.1.7"
   GCC_GNU: false
   GCC_64_SOURCE: "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9.git"
   GCC_64_BRANCH: "android12L-release"
@@ -35,8 +35,8 @@ env:
 
   # The selected source commit already contains SUSFS modifications.
   # Do not apply the framework's SUSFS patch a second time.
-  SUSFS_ENABLE: false
-  SUSFS_FIXED: false
+  SUSFS_ENABLE: true
+  SUSFS_FIXED: true
 
   AK3_SOURCE: "https://github.com/osm0sis/AnyKernel3.git"
   AK3_BRANCH: "master"
@@ -54,12 +54,12 @@ env:
 
   KERNELSU_METHOD: "shell"
 
-  PATCHES_SOURCE: ""
-  PATCHES_BRANCH: ""
+  PATCHES_SOURCE: "JackA1ltman/NonGKI_Kernel_Patches"
+  PATCHES_BRANCH: "mainline"
   SUSFS_FOLDER_FIXED: ""
-  SUSFS_PATCH_FIXED: ""
+  SUSFS_PATCH_FIXED: "susfs_patch_to_5.4, susfs_inline_hook_patches"
 
-  REKERNEL_ENABLE: "false"
+  REKERNEL_ENABLE: "true"
   DROIDSPACES_ENABLE: "false"
   NOMOUNT_ENABLE: "false"
   HOOK_METHOD: "syscall"
@@ -74,9 +74,9 @@ env:
   GENERATE_DTB: "false"
   GENERATE_CHIP: "qcom"
 
-  BUILD_DEBUGGER: "true"
+  BUILD_DEBUGGER: "false"
   SKIP_PATCH: "false"
-  BUILD_OTHER_CONFIG: "false"
+  BUILD_OTHER_CONFIG: "true"
   MERGE_CONFIG_FILES: "vendor/debugfs.config,vendor/lahaina_QGKI.config"
 
   FREE_MORE_SPACE: "false"

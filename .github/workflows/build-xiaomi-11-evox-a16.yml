@@ -13,7 +13,7 @@ env:
   EXTRA_CMDS : "LD=ld.lld"
 
   KERNEL_SOURCE : "https://github.com/natsumerinchan/android_kernel_oneplus_sm8350.git"
-  KERNEL_BRANCH : "bfb34a1"
+  KERNEL_BRANCH : "fourteen-qpr3"
 
   CLANG_SOURCE : "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
   CLANG_BRANCH : "lineage-20.0"
